@@ -22,7 +22,7 @@ intro:
 ## Weekly Meeting
 
 | **When**   | Monday, 3:00–4:00 p.m. Central Time                         |
-| **Online** | https://unl.zoom.us/j/344520180                             |
+| **Online** | [https://unl.zoom.us/j/344520180](https://unl.zoom.us/j/344520180)                             |
 | **Phone**  | +1 646 876 9923,or +1 669 900 6833, Meeting ID: 344 520 180 |
 
 ## Abstract
