@@ -1,0 +1,8 @@
+John Thiltges:
+  name        : "John Thiltges"
+  bio         : "System Administrator at University of Nebraska - Lincoln"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:jthiltges@unl.edu"
+
