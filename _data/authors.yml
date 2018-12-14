@@ -6,3 +6,13 @@ John Thiltges:
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:jthiltges@unl.edu"
 
+Derek Weitzel:
+  name        : "Derek Weitzel"
+  bio         : "Software Engineer at University of Nebraska - Lincoln"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:dweitzel@unl.edu"
+    - label: "Github"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/djw8605"
