@@ -6,3 +6,12 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.masthead {
+  background-image: url("/images/sand_dune.png");
+  background-repeat: no-repeat;
+}
+
+.greedy-nav {
+  background: transparent;
+}
