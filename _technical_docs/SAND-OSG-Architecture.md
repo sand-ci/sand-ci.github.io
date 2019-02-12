@@ -1,7 +1,9 @@
 ---
 title: "SAND Technical Documentation"
-permalink: /sand-architecture/
+#permalink: /technical-docs/
 layout: single
+date: "2019-02-04"
+toc: true
 ---
 
 

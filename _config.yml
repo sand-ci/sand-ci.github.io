@@ -276,6 +276,8 @@ compress_html:
 collections:
   meetings:
     output: true
+  technical_docs:
+    output: true
 
 # Defaults
 defaults:
