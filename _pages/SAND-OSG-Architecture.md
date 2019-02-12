@@ -1,3 +1,8 @@
+---
+title: "SAND Technical Documentation"
+permalink: /technical-docs/
+layout: single
+---
 <!----- Conversion time: 5.248 seconds.
 
 
