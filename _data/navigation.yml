@@ -6,7 +6,7 @@ main:
     url: /about
   - title: "Meetings"
     url: /meetings
-  - title: "Sample Posts"
+  - title: "Technical Docs"
     url: /technical-docs/
   # - title: "Sample Collections"
   #   url: /collection-archive/
