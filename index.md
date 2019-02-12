@@ -17,7 +17,15 @@ header:
 excerpt: 'Combine, visualize, and analyze disparate network monitoring and service logging data'
 intro: 
   - excerpt: 'Service Analysis and Network Diagnosis'
-
+feature_row:
+  - image_path: /images/sample_packet_loss.png
+    alt: "Sample packet loss graph"
+    title: "Packet Loss Tracking"
+    excerpt: "Sample packet loss graph from the SAND archive"
+  - image_path: /images/sample_throughput.png
+    alt: "Sample TCP throughput graph"
+    title: "Throughput Tracking"
+    excerpt: "SAND's archives record historical single-stream TCP throughout across many links"
 ---
 
 ## About SAND
@@ -31,6 +39,8 @@ SAND supports and collaborates with long-running activities such as the
 [OSG-Networking area](https://opensciencegrid.org/networking/) and the
 [WLCG Throughput working group](https://twiki.cern.ch/twiki/bin/view/LCG/NetworkTransferMetrics).  The
 data collected by each of these projects goes into the SAND Network Monitoring Archive (SAND-NMA).
+
+{% include feature_row %}
 
 ## Abstract
 
