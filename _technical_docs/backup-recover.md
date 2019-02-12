@@ -10,49 +10,11 @@ sidebar:
 
 ## Backup
 
-Backups of PerfSonar data is performed by the [gracc archive](https://github.com/opensciencegrid/gracc-archive) service hosted on the GRACC head node and the [gracc-backup](https://github.com/opensciencegrid/gracc-backup) scripts.  Every message sent to the message bus by the PerfSonar tools is duplicated, one copy going to the archiver and the other to the PerfSonar collectors.
+Backups of PerfSonar data is performed by the [gracc archive](https://github.com/opensciencegrid/gracc-archive) service hosted on the GRACC head node and the [gracc backup](https://github.com/opensciencegrid/gracc-backup) scripts.  Every message sent to the message bus by the PerfSonar tools is duplicated, one copy going to the archiver and the other to the PerfSonar collectors.
 
 Every day, the backup `tar.gz` file is copied to FNAL where it is eventually put on tape.
 
-The archiver runs as a `systemd` service.
-
-
-
-The backup runs as a `systemd` timer, graccbackup-ps-prod.timer:
-
-    [Unit]
-    Description=Run GRACC Backup for Raw Records
-
-    [Timer]
-    # Explicitly declare service that this timer is responsible for
-    Unit=graccbackup@ps-prod.service
-
-    OnBootSec=1min
-    OnUnitActiveSec=6h
-
-    [Install]
-    WantedBy=timers.target
-
-The backup service `systemd` unit file:
-
-    [Unit]
-    Description=GRACC Periodic Backup
-    Documentation=https://opensciencegrid.github.io/gracc
-    Wants=network-online.target
-    After=network-online.target
-
-    [Service]
-    User=gracc
-    Group=gracc
-    Type=oneshot
-    Environment=IN=%i
-    PermissionsStartOnly=true
-    ExecStartPre=/bin/bash -c "systemctl set-environment DEST=`grep dest /etc/graccarchive/config/gracc-archive-${IN}.toml | grep -v \\# | cut -d\\' -f2`"
-    ExecStart=/usr/bin/gracc-backup /var/lib/graccarchive/%i/output /var/lib/graccarchive/%i/secondary ${DEST} 
-    TimeoutStopSec=5min
-
-    [Install]
-    WantedBy=multi-user.target
+The archiver runs as a `systemd` service.  The backups run as `systemd` timers.
 
 ## Recovery
 
