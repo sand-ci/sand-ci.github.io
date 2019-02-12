@@ -3,34 +3,6 @@ title: "SAND Technical Documentation"
 permalink: /technical-docs/
 layout: single
 ---
-<!----- Conversion time: 5.248 seconds.
-
-
-Using this Markdown file:
-
-1. Cut and paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β14
-* Tue Feb 12 2019 11:12:50 GMT-0800 (PST)
-* Source doc: https://docs.google.com/a/umich.edu/open?id=1Zy27YC3Hg5_1he8Wehg2IR91PHmaduTLbieA_TrvbVU
-* This is a partial selection. Check to make sure intra-doc links work.
-* This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server.
------>
-
-
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 0; ALERTS: 2.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-<a href="#gdcalert2">alert2</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
 
 
 # OSG/SAND Architecture
@@ -44,10 +16,6 @@ This document is intended to document and track the OSG networking services as w
 The data pipeline for OSG looked like this about 1 year ago:
 
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/SAND-Architecture0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/SAND-Architecture0.png "image_tooltip")
 
 
@@ -55,9 +23,6 @@ There were two message buses and lots of information went to only one or the oth
 
 As of June 2018 we updated the data pipeline to be a little easier, making the RabbitMQ bus the "primary" destination.  Data is now "shoveled" onto the CERN ActiveMQ bus to feed the CERN Grafana instance.
 
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/SAND-Architecture1.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/SAND-Architecture1.png "image_tooltip")
