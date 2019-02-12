@@ -18,12 +18,17 @@ intro:
 # https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/docs/_pages/splash-page.md
 ---
 
+## About SAND
 
-## Weekly Meeting
+The SAND project coordinates network monitoring and diagnostics from over a hundred application-level
+measurement points and aggregates them into a measurement archive.  This curated measurement archive
+provides access to historical and quasi-real-time network performance data, allowing for higher-level
+diagnastics and analyses.
 
-| **When**   | Monday, 3:00–4:00 p.m. Central Time                         |
-| **Online** | [https://unl.zoom.us/j/344520180](https://unl.zoom.us/j/344520180)                             |
-| **Phone**  | +1 646 876 9923,or +1 669 900 6833, Meeting ID: 344 520 180 |
+SAND supports and collaborates with long-running activities such as the
+[OSG-Networking area](https://opensciencegrid.org/networking/) and the
+[WLCG Throughput working group](https://twiki.cern.ch/twiki/bin/view/LCG/NetworkTransferMetrics).  The
+data collected by each of these projects goes into the SAND Network Monitoring Archive (SAND-NMA).
 
 ## Abstract
 
@@ -43,14 +48,9 @@ techniques that better combine, visualize, and analyze disparate network monitor
 data, providing a comprehensive picture critical to the engineers and scientists relying on the network.
 This will allow problems to be located and fixed more quickly, reducing the time to science.
 
-## About SAND
+## Weekly Meeting
 
-The SAND project coordinates network monitoring and diagnostics from over a hundred application-level
-measurement points and aggregates them into a measurement archive.  This curated measurement archive
-provides access to historical and quasi-real-time network performance data, allowing for higher-level
-diagnastics and analyses.
+| **When**   | Monday, 3:00–4:00 p.m. Central Time                         |
+| **Online** | [https://unl.zoom.us/j/344520180](https://unl.zoom.us/j/344520180)                             |
+| **Phone**  | +1 646 876 9923,or +1 669 900 6833, Meeting ID: 344 520 180 |
 
-SAND supports and collaborates with long-running activities such as the
-[OSG-Networking area](https://opensciencegrid.org/networking/) and the
-[WLCG Throughput working group](https://twiki.cern.ch/twiki/bin/view/LCG/NetworkTransferMetrics).  The
-data collected by each of these projects goes into the SAND Network Monitoring Archive (SAND-NMA).
