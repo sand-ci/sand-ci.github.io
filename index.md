@@ -7,6 +7,10 @@ header:
   overlay_filter: "0.5"
   #overlay_image: /assets/images/unsplash-image-1.jpg
   actions:
+    - label: "View Network Dashboard"
+      url: "https://psmad.opensciencegrid.org/maddash-webui/index.cgi"
+    - label: "Historical Network Performance"
+      url: "http://atlas-kibana.mwt2.org:5601/app/kibana#/dashboard/perfSONAR"
     - label: "View Github"
       url: "https://github.com/sand-ci"
   caption: ""
@@ -14,8 +18,6 @@ excerpt: 'Combine, visualize, and analyze disparate network monitoring and servi
 intro: 
   - excerpt: 'Service Analysis and Network Diagnosis'
 
-# Taken from:
-# https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/docs/_pages/splash-page.md
 ---
 
 ## About SAND
