@@ -12,3 +12,9 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+
+docs:
+  - title: "Services"
+    children:
+      - title: "Backup and Recovery"
+        url: "/technical_docs/backup-recover/"
