@@ -45,8 +45,8 @@ This procedure has been tested from the GRACC frontend node (gracc.opensciencegr
 
 4. Run the unarchiver.  You will need the connection username, password parameters.
 
-        $ graccunarchiver -p "amqps://username:password@clever-turkey.rmq.cloudamqp.com/osg-nma” osg.ps.raw /tmp/gracc-hcc-gracc-fe1.unl.edu-2019-02-08.tar.gz 
+        $ graccunarchiver -p "amqps://username:password@clever-turkey.rmq.cloudamqp.com/osg-nma” amq.topic /tmp/gracc-hcc-gracc-fe1.unl.edu-2019-02-08.tar.gz 
 
-    Unfortunately, no feedback is given on the command line.
+    The unarchiver will produce status updates every 1000 records sent to the message bus.
 
 
