@@ -15,6 +15,8 @@ header:
       url: "https://gracc.opensciencegrid.org/dashboard/db/perfsonar-collector?orgId=1"
     - label: "View Github"
       url: "https://github.com/sand-ci"
+    - label: "perfSONAR Toolkit Information"
+      url: "https://toolkitinfo.opensciencegrid.org/toolkitinfo/"
   caption: ""
 excerpt: 'Combine, visualize, and analyze disparate network monitoring and service logging data'
 intro: 
