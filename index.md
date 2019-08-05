@@ -50,6 +50,8 @@ SAND supports and collaborates with long-running activities such as the
 [WLCG Throughput working group](https://twiki.cern.ch/twiki/bin/view/LCG/NetworkTransferMetrics).  The
 data collected by each of these projects goes into the SAND Network Monitoring Archive (SAND-NMA).
 
+SAND maintains a map of CC\* sites running perfSONAR; to allow your site to show up, [follow these directions](join-community).
+
 {% include feature_row %}
 
 ## SAND Network Monitoring Archive

@@ -20,5 +20,9 @@ techniques that better combine, visualize, and analyze disparate network monitor
 data, providing a comprehensive picture critical to the engineers and scientists relying on the network.
 This will allow problems to be located and fixed more quickly, reducing the time to science.
 
+<div class="notice">
+  <h4>SAND Team at its 2019 Face-to-face meeting</h4>
+  <img class="card-img-bottom" src="/images/SAND-f2f-group-picture.jpg" alt="SAND Project Group Picture"/>
+</div>
 
 The SAND project is sponsored by the NSF, grant 1827116
