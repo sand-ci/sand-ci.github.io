@@ -2,9 +2,10 @@
 title: "Join the community"
 permalink: /join-community/
 layout: single
+classes: wide
 ---
 
-# Joining the CCSTAR community
+## Joining the CCSTAR community
 
 1. Visit your perfSONAR endpoint webpage
 1. Follow the "Configuration" link at the upper right and login
@@ -16,7 +17,7 @@ layout: single
 
    ![Communities](/images/join-community/communities.png)
 
-# Confirming the change
+## Confirming the change
 
 Note: It will take 1-2 hours for the change to propagate to the service directory.
 
