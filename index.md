@@ -64,6 +64,17 @@ data into directly), an archive, and a visualization platform, as pictured here:
   <img class="card-img-bottom" src="/images/SAND-Architecture1.png" alt="SAND-NMA Architecture"/>
 </div>
 
+Currently, we are recording network measurements from perfSONAR and
+[HTCondor file transfer](https://opensciencegrid.org/docs/other/schedd-filebeats/); we plan to
+extend this to XRootD services during 2020.
+
+A few metrics about our service:
+
+* SAND users: SAND is utilized by US ATLAS and US CMS to help debug their network performance.
+* Number of unique data sources: 274
+* Number of HTCondor submit hosts reporting network measurements: 23
+* Number of distinct measurements in the ElasticSearch database: over 2.3 billion
+
 ## Motivation
 
 Increasingly, science has become a "team sport" with projects less likely to be conducted by a single
