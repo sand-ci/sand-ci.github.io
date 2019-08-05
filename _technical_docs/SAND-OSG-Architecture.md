@@ -25,7 +25,7 @@ At the start of the SAND project, the network data pipline architecture had two 
 
 ## OSG/SAND Service Component Overview
 
-For SAND (and OSG and IRIS-HEP), we need to understand the details in the SAND-NMA architecture diagram above.  There are multiple components shown.   Starting from the upper left, we have the global perfSONAR infrastructure, deployed at various institutions, national labs and universities.   
+For SAND (and IRIS-HEP/OSG-LHC), we need to understand the details in the SAND-NMA architecture diagram above.  There are multiple components shown.   Starting from the upper left, we have the global perfSONAR infrastructure, deployed at various institutions, national labs and universities.   
 
 - There are four components running at the University of Michigan:  pSConfig (PWA), psetf (Check_MK), MaDDash (pS dashboard) and pefsonar-collector (gathers data and sends to RabbitMQ).   
 
