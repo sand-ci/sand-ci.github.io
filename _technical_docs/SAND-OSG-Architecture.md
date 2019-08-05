@@ -11,17 +11,12 @@ toc: true
 
 To understand and plan out the SAND architecture, we need to first review what we have developed in the OSG networking area, since this will serve as a basis for SAND to build upon.
 
-This document is intended to document and track the OSG networking services as well as any related SAND project services.  The goal here is a living document to provide all the relevant information about our services, hosts, owners, administrators and associated monitoring.  It needs to be merged with [https://docs.google.com/document/d/1l144BSo-88M0cLMMjKcKMIE-Q5s21X-w3lYl-0Pn_08/edit](https://docs.google.com/document/d/1l144BSo-88M0cLMMjKcKMIE-Q5s21X-w3lYl-0Pn_08/edit) and the resulting document co-located in OSG Networking and SAND areas.
-
 ## OSG/SAND Data Pipeline
 
 The data pipeline for OSG looked like this about 1 year ago:
 
-feature_row:
-  - image_path: /images/SAND-Architecture0.png
-    alt: "Starting SAND architecture"
-    title: "Starting SAND Architecture"
-    excerpt: "The original architecture had two message buses, each with their own subset of the data."
+![Starting SAND architecture](https://github.com/sand-ci/sand-ci.github.io/blob/master/images/SAND-Architecture1.png "Starting SAND Architecture")
+  excerpt: "The original architecture had two message buses, each with their own subset of the data."
 ---
 
 
