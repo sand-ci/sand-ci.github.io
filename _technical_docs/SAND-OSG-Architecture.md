@@ -13,8 +13,6 @@ To understand and plan out the SAND architecture, we need to first review what w
 
 This document is intended to document and track the OSG networking services as well as any related SAND project services.  The goal here is a living document to provide all the relevant information about our services, hosts, owners, administrators and associated monitoring.  It needs to be merged with [https://docs.google.com/document/d/1l144BSo-88M0cLMMjKcKMIE-Q5s21X-w3lYl-0Pn_08/edit](https://docs.google.com/document/d/1l144BSo-88M0cLMMjKcKMIE-Q5s21X-w3lYl-0Pn_08/edit) and the resulting document co-located in OSG Networking and SAND areas.
 
-**Shawn: To-do: convert to MD and add to sandci.io page**
-
 ## OSG/SAND Data Pipeline
 
 The data pipeline for OSG looked like this about 1 year ago:
@@ -40,10 +38,11 @@ feature_row:
 
 The lines in "red" are not yet implemented
 
+## OSG/SAND Service Component Details
+
 For SAND (and OSG and IRIS-HEP), we need to understand the details in the above boxes.  
 
 My first suggestion would be that we identify details for each of the main boxes above providing:
-
 
 
 1.  Owner and description info: who "owns" this component?  What does it do?
@@ -52,6 +51,9 @@ My first suggestion would be that we identify details for each of the main boxes
 1.  Monitoring info: is the component monitored?  If it stops or gets bad data, how are we alerted?
 
 On the SAND call today (September 24, 2018) we want to use this document to flesh out the above details for the following data pipeline elements:
+
+
+### pSConfig (PWA)
 
 **<span style="text-decoration:underline;">psconfig.opensciencegrid.org</span>**
 
@@ -79,6 +81,9 @@ On the SAND call today (September 24, 2018) we want to use this document to fles
 
 FYI, all the Opensciencegrid production network services are monitored in the Business Intelligience check_mk setup at [https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fview_name%3Daggr_all](https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fview_name%3Daggr_all)
 
+
+### psetf (Check_MK) service monitoring
+
 **<span style="text-decoration:underline;">psetf.opensciencegrid.org</span>**
 
 **<span style="text-decoration:underline;">	</span>Responsible Organization**: OSG-LHC
@@ -99,6 +104,9 @@ FYI, all the Opensciencegrid production network services are monitored in the Bu
 
 	**Monitoring info**:  The psetf instance monitors itself at [https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fhost%3Dpsetf%26site%3Detf%26view_name%3Dhost](https://psetf.grid.iu.edu/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fhost%3Dpsetf%26site%3Detf%26view_name%3Dhost)   The instances also publishes data to the RabbitMQ bus via the 'rmq' container running in Docker on the psetf.opensciencegrid.org host system.  It publishes these two topics:  perfsonar.summary.meta and perfsonar.summary.status on the RMQ bus.  FYI, all the Opensciencegrid production network services are monitored in the Business Intelligience check_mk setup at [https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fview_name%3Daggr_all](https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fview_name%3Daggr_all)
 
+
+### MaDDash Dashboards
+
 **<span style="text-decoration:underline;">psmad.opensciencegrid.org</span>**
 
 **	Responsible Organization**: WLCG Throughput WG
@@ -112,6 +120,8 @@ FYI, all the Opensciencegrid production network services are monitored in the Bu
 **	Verification info: **Confirm access URL above responds.  Verify mesh results for the list meshes in the menu. 
 
 **	Monitoring info:   **FYI, all the Opensciencegrid production network services are monitored in the Business Intelligience check_mk setup at [https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fview_name%3Daggr_all](https://psetf.opensciencegrid.org/etf/check_mk/index.py?start_url=%2Fetf%2Fcheck_mk%2Fview.py%3Fview_name%3Daggr_all)
+
+### pSCollector (pS data gathering)
 
 **<span style="text-decoration:underline;">psrsv.opensciencegrid.org</span>**
 
@@ -133,6 +143,8 @@ FYI, all the Opensciencegrid production network services are monitored in the Bu
 
 **	Source code:**  [https://github.com/opensciencegrid/rsv-perfsonar](https://github.com/opensciencegrid/rsv-perfsonar)
 
+### perfSONAR Infrastructure
+
 **<span style="text-decoration:underline;">perfSONAR Infrastructure</span>**
 
 **	Responsible Organization**: Participating sites
@@ -150,6 +162,8 @@ FYI, all the Opensciencegrid production network services are monitored in the Bu
 **	Verification info: **Toolkit web page should load and show recent results. Data quality is verified by corresponding tool providers (iperf3, traceroute, owamp, etc.). This would be in most cases ESNet.
 
 **	Monitoring info: **psetf.opensciencegrid.org provides comprehensive monitoring of the infrastructure (metrics are listed at http://opensciencegrid.org/networking/perfsonar/faq/)
+
+### RabbitMQ Bus 
 
 **<span style="text-decoration:underline;">RabbitMQ Bus</span>**
 
@@ -170,6 +184,8 @@ FYI, all the Opensciencegrid production network services are monitored in the Bu
 **	Monitoring info:** If messages build up on the queue, we get an alert (GRACC admins).  Nothing on "too few messages" [https://gracc.opensciencegrid.org/dashboard/db/rabbitmq-queues](https://gracc.opensciencegrid.org/dashboard/db/rabbitmq-queues) \
 
 
+### ActiveMQ Bus
+
 **<span style="text-decoration:underline;">ActiveMQ Bus</span>**
 
 **	Responsible Organization**: CERN IT
@@ -187,6 +203,8 @@ FYI, all the Opensciencegrid production network services are monitored in the Bu
 **	Verification info: **No data quality monitors
 
 **	Monitoring info: **Notifications/alerting on data missing on particular topic is provided by CERN MIG and is sent to perfsonar-esmond-mq e-group (@cern.ch)
+
+### ESnet Collector 
 
 **<span style="text-decoration:underline;">ESnet Collector</span>**
 
@@ -208,6 +226,8 @@ FYI, all the Opensciencegrid production network services are monitored in the Bu
 
             **Notes**:  Currently bypasses our RabbitMQ bus.  Need to rework the process to send to the bus and update the collectors to push this data to our ES instances.
 
+### LHCOPN Collector
+
 **<span style="text-decoration:underline;">LHCOPN publisher</span>**
 
 **	Responsible Organization**: CERN IT / CS
@@ -228,6 +248,8 @@ FYI, all the Opensciencegrid production network services are monitored in the Bu
 
 **	Notes**: There are data privacy issues here that need to be worked out with CERN IT (initial contact should be Edoardo Martelli).  Data is sent to CERN ActiveMQ bus but not integrated with the rest of the system.
 
+### CERN MONIT (Elasticsearch)
+
 **<span style="text-decoration:underline;">MONIT Elasticsearch (CERN)</span>**
 
 	**Owner: **CERN IT/MM
@@ -245,6 +267,8 @@ FYI, all the Opensciencegrid production network services are monitored in the Bu
 **	Monitoring info: **CERN MONIT internal monitoring 
 
 **	Note**: Consumers of the data.
+
+### CERN Grafana Dashboards
 
 **<span style="text-decoration:underline;">Grafana (CERN)</span>**
 
