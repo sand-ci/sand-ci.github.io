@@ -59,10 +59,8 @@ knowledgebase for debugging networks and performing data analytics.  This archiv
 a data collector (polling measurement endpoints), a message bus (which endpoints can also push
 data into directly), an archive, and a visualization platform, as pictured here:
 
-<div class="card w-75">
-  <div class="card-header">SAND-NMA Architecture</div>
-  <div class="card-body">
-  </div>
+<div class="notice">
+  <h4>SAND-NMA Architecture</h4>
   <img class="card-img-bottom" src="/images/SAND-Architecture1.png" alt="SAND-NMA Architecture"/>
 </div>
 
