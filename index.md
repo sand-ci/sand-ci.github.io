@@ -26,10 +26,16 @@ feature_row:
     alt: "Sample packet loss graph"
     title: "Packet Loss Tracking"
     excerpt: "Sample packet loss graph from the SAND archive"
+    url: https://atlas-kibana.mwt2.org/s/networking/app/kibana#/dashboard/perfSONAR
   - image_path: /images/sample_throughput.png
     alt: "Sample TCP throughput graph"
     title: "Throughput Tracking"
     excerpt: "SAND's archives record historical single-stream TCP throughout across many links"
+  - image_path: /images/sample_data_collection.png
+    alt: "Sample Data Collection Rates"
+    title: "Running Data Collection Queries"
+    excerpt: "SAND continuously queries participating perfSONAR endpoints to pull their data into the archive"
+    url: https://gracc.opensciencegrid.org/dashboard/db/perfsonar-collector?orgId=1
 ---
 
 ## About SAND
@@ -46,7 +52,21 @@ data collected by each of these projects goes into the SAND Network Monitoring A
 
 {% include feature_row %}
 
-## Abstract
+## SAND Network Monitoring Archive
+
+The SAND-NMA aims to aggregate as much network monitoring tests results as feasible, providing a
+knowledgebase for debugging networks and performing data analytics.  This archive consists of
+a data collector (polling measurement endpoints), a message bus (which endpoints can also push
+data into directly), an archive, and a visualization platform, as pictured here:
+
+<div class="card w-75">
+  <div class="card-header">SAND-NMA Architecture</div>
+  <div class="card-body">
+  </div>
+  <img class="card-img-bottom" src="/images/SAND-Architecture1.png" alt="SAND-NMA Architecture"/>
+</div>
+
+## Motivation
 
 Increasingly, science has become a "team sport" with projects less likely to be conducted by a single
 investigator or university group but with multi-institution collaborations spanning many universities
