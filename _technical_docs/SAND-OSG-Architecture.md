@@ -13,7 +13,7 @@ To understand and plan out the SAND architecture, we need to first review what w
 
 ## OSG/SAND Data Pipeline
 
-At the start of the SAND project, the network data pipline architecture had two message buses, each with their own subset of the data.  Many of the components we unreliable and there were significant latency issues between data generation and having the data present in it's long-term storage location.  Our first task we to  update the data pipeline to be a little easier, making the RabbitMQ bus the "primary" destination.  Data was now "shoveled" onto the CERN ActiveMQ bus to feed the CERN Grafana instance.  The following shows the data pipeline overview, starting from the set of globally distributed perfSONAR instances and leading to the various analytics platforms and dashboard providers.
+At the start of the SAND project, the network data pipline architecture had two message buses, each with their own subset of the data.  Many of the components we unreliable and there were significant latency issues between data generation and having the data present in it's long-term storage location.  Our first task we to  update the data pipeline to be more robust and conceptually easier, making the RabbitMQ bus the "primary" destination.  Data was now "shoveled" onto the CERN ActiveMQ bus to feed the CERN Grafana instance.  The following shows the data pipeline overview, starting from the set of globally distributed perfSONAR instances and leading to the various analytics platforms and dashboard providers.
 
 <div class="card w-75">
   <div class="card-header"> Updated SAND-NMA Architecture</div>
@@ -23,20 +23,11 @@ At the start of the SAND project, the network data pipline architecture had two 
 </div>
 
 
-## OSG/SAND Service Component Details
+## OSG/SAND Service Component Overview
 
-For SAND (and OSG and IRIS-HEP), we need to understand the details in the above boxes.  
+For SAND (and OSG and IRIS-HEP), we need to understand the details in the SAND-NMA architecture diagram above.  There are multiple components shown.   Starting from the upper left, we have the global perfSONAR infrastructure, deployed at various institutions, national labs and universities.   There are four components running at the University of Michigan:  pSConfig (PWA), psetf (Check_MK), MaDDash (pS dashboard) and pefsonar-collector (gathers data and sends to RabbitMQ).   The University of Nebraska/Lincoln, runs another four components of the pipeline: the RabbitMQ bus (commercially hosted), a data ingestor that grabs data from the bus and and puts it into Elasticsearch, an Elasticsearch instance for long-term storage and a service pushing data to tape at Fermilab.  The University of Chicago provides two components: a data ingestor reading RabbitMQ and writing to Elasticsearch and a high-performance Elasticsearch for near real-time data analytics. CERN is taking care of the process that reads from RabbitMQ and exports to the CERN ActiveMQ bus and is providing a MONIT Elasticsearch instance with separate Grafana dashboards to visualize the network data in the pipeline.   Fermilab is providing access to their tape archive for long-term backup of the data.  The amount of 5-10 TB/year is easy to handle.  Additionally some of the LHC experiments, LHCb in particular, are using the network data from the bus to explore optimization of their workflows.
 
-My first suggestion would be that we identify details for each of the main boxes above providing:
-
-
-1.  Owner and description info: who "owns" this component?  What does it do?
-1.  Access info:  who can access it and how? (Both admins and users)
-1.  Verification info:  is the component working?  How do I check?
-1.  Monitoring info: is the component monitored?  If it stops or gets bad data, how are we alerted?
-
-On the SAND call today (September 24, 2018) we want to use this document to flesh out the above details for the following data pipeline elements:
-
+In the next few sections we will provide details about each of the above components including a brief description, relevant URLs (where publically accessible), monitoring details, components owners and who to contact if there are issues.
 
 ### pSConfig (PWA)
 
