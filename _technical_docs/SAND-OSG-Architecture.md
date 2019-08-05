@@ -15,19 +15,27 @@ This document is intended to document and track the OSG networking services as w
 
 **Shawn: To-do: convert to MD and add to sandci.io page**
 
+## OSG/SAND Data Pipeline
+
 The data pipeline for OSG looked like this about 1 year ago:
 
+feature_row:
+  - image_path: /images/SAND-Architecture0.png
+    alt: "Starting SAND architecture"
+    title: "Starting SAND Architecture"
+    excerpt: "The original architecture had two message buses, each with their own subset of the data."
+---
 
-![alt_text](images/SAND-Architecture0.png "image_tooltip")
 
-
-There were two message buses and lots of information went to only one or the other.
 
 As of June 2018 we updated the data pipeline to be a little easier, making the RabbitMQ bus the "primary" destination.  Data is now "shoveled" onto the CERN ActiveMQ bus to feed the CERN Grafana instance.
 
-
-
-![alt_text](images/SAND-Architecture1.png "image_tooltip")
+feature_row:
+  - image_path: /images/SAND-Architecture1.png
+    alt: "Updated SAND architecture"
+    title: "Updated SAND Architecture"
+    excerpt: "The original architecture had two message buses, each with their own subset of the data."
+---
 
 
 The lines in "red" are not yet implemented
