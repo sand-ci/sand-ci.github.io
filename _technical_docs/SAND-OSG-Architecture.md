@@ -13,25 +13,15 @@ To understand and plan out the SAND architecture, we need to first review what w
 
 ## OSG/SAND Data Pipeline
 
-The data pipeline for OSG looked like this about 1 year ago:
+At the start of the SAND project, the network data pipline architecture had two message buses, each with their own subset of the data.  Many of the components we unreliable and there were significant latency issues between data generation and having the data present in it's long-term storage location.  Our first task we to  update the data pipeline to be a little easier, making the RabbitMQ bus the "primary" destination.  Data was now "shoveled" onto the CERN ActiveMQ bus to feed the CERN Grafana instance.  The following shows the data pipeline overview, starting from the set of globally distributed perfSONAR instances and leading to the various analytics platforms and dashboard providers.
 
-![Starting SAND architecture](https://github.com/sand-ci/sand-ci.github.io/blob/master/images/SAND-Architecture1.png "Starting SAND Architecture")
-  excerpt: "The original architecture had two message buses, each with their own subset of the data."
----
+<div class="card w-75">
+  <div class="card-header"> Updated SAND-NMA Architecture</div>
+  <div class="card-body">
+  </div>
+  <img class="card-img-bottom" src="/images/SAND-Architecture1.png" alt="Updated SAND-NMA Architecture"/>
+</div>
 
-
-
-As of June 2018 we updated the data pipeline to be a little easier, making the RabbitMQ bus the "primary" destination.  Data is now "shoveled" onto the CERN ActiveMQ bus to feed the CERN Grafana instance.
-
-feature_row:
-  - image_path: /images/SAND-Architecture1.png
-    alt: "Updated SAND architecture"
-    title: "Updated SAND Architecture"
-    excerpt: "The original architecture had two message buses, each with their own subset of the data."
----
-
-
-The lines in "red" are not yet implemented
 
 ## OSG/SAND Service Component Details
 
