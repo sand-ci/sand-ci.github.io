@@ -25,7 +25,19 @@ At the start of the SAND project, the network data pipline architecture had two 
 
 ## OSG/SAND Service Component Overview
 
-For SAND (and OSG and IRIS-HEP), we need to understand the details in the SAND-NMA architecture diagram above.  There are multiple components shown.   Starting from the upper left, we have the global perfSONAR infrastructure, deployed at various institutions, national labs and universities.   There are four components running at the University of Michigan:  pSConfig (PWA), psetf (Check_MK), MaDDash (pS dashboard) and pefsonar-collector (gathers data and sends to RabbitMQ).   The University of Nebraska/Lincoln, runs another four components of the pipeline: the RabbitMQ bus (commercially hosted), a data ingestor that grabs data from the bus and and puts it into Elasticsearch, an Elasticsearch instance for long-term storage and a service pushing data to tape at Fermilab.  The University of Chicago provides two components: a data ingestor reading RabbitMQ and writing to Elasticsearch and a high-performance Elasticsearch for near real-time data analytics. CERN is taking care of the process that reads from RabbitMQ and exports to the CERN ActiveMQ bus and is providing a MONIT Elasticsearch instance with separate Grafana dashboards to visualize the network data in the pipeline.   Fermilab is providing access to their tape archive for long-term backup of the data.  The amount of 5-10 TB/year is easy to handle.  Additionally some of the LHC experiments, LHCb in particular, are using the network data from the bus to explore optimization of their workflows.
+For SAND (and OSG and IRIS-HEP), we need to understand the details in the SAND-NMA architecture diagram above.  There are multiple components shown.   Starting from the upper left, we have the global perfSONAR infrastructure, deployed at various institutions, national labs and universities.   
+
+- There are four components running at the University of Michigan:  pSConfig (PWA), psetf (Check_MK), MaDDash (pS dashboard) and pefsonar-collector (gathers data and sends to RabbitMQ).   
+
+- The University of Nebraska/Lincoln, runs another four components of the pipeline: the RabbitMQ bus (commercially hosted), a data ingestor that grabs data from the bus and and puts it into Elasticsearch, an Elasticsearch instance for long-term storage and a service pushing data to tape at Fermilab.  
+
+- The University of Chicago provides two components: a data ingestor reading RabbitMQ and writing to Elasticsearch and a high-performance Elasticsearch for near real-time data analytics. 
+
+- CERN is taking care of the process that reads from RabbitMQ and exports to the CERN ActiveMQ bus and is providing a MONIT Elasticsearch instance with separate Grafana dashboards to visualize the network data in the pipeline.   
+
+- Fermilab is providing access to their tape archive for long-term backup of the data.  The amount of 5-10 TB/year is easy to handle.  
+
+Additionally some of the LHC experiments, LHCb in particular, are using the network data from the bus to explore optimization of their workflows.
 
 In the next few sections we will provide details about each of the above components including a brief description, relevant URLs (where publically accessible), monitoring details, components owners and who to contact if there are issues.
 
