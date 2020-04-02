@@ -8,6 +8,8 @@ main:
     url: /meetings
   - title: "Technical Docs"
     url: /technical-docs/
+  - title: "Case Studies"
+    url: /case-studies/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

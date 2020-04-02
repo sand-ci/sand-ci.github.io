@@ -278,6 +278,8 @@ collections:
     output: true
   technical_docs:
     output: true
+  case_studies:
+    output: true
 
 # Defaults
 defaults:
