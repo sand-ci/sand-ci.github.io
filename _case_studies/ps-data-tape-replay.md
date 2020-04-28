@@ -10,8 +10,8 @@ author_profile: true
 
 A replay of the collected perfSONAR was initiated due to three changes in the ingestion of the data:
 
-1. The record id was calculated using the python hash() function. The record id is used to identify and remove duplicate records. With Python 3.3, the hash() function changed to a secured version that was not predictable between runs. Therefore, any playback from tape would not be detected as duplicate.
-1. The perfSONAR metrics include traceroute, a snapshot of the network path between two nodes. To allow the path to be easily identified, queried and reported in ElasticSearch, the path is hashed to a single value as the data is stored. The Python built-in hash() function was initially used. As with 1. the hash() function changed to a secured version that was not predictable between runs. This left our path data unusable to identify duplicate paths.
+1. The record ID was calculated using the python `hash()` function. The record id is used to identify and remove duplicate records. With Python 3.3, the `hash()` function changed to a secured version that was not predictable between runs. Therefore, any playback from tape would not be detected as duplicate.
+1. The perfSONAR metrics include traceroute, a snapshot of the network path between two nodes. To allow the path to be easily identified, queried and reported in ElasticSearch, the path is hashed to a single value as the data is stored. The Python built-in `hash()` function was initially used. As with 1. the `hash()` function changed to a secured version that was not predictable between runs. This left our path data unusable to identify duplicate paths.
 1. Three new attributes were added to the traceroute ingester.
 
 We corrected the code to generate reproducible hashes. This fixed future metrics, but not the years of existing data. To correct existing data, we elected to replay the perfSonar metrics from tape backups onto the message bus, reprocessing them with the new code.
