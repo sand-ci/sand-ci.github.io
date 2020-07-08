@@ -17,7 +17,7 @@ header:
       url: "https://github.com/sand-ci"
     - label: "perfSONAR Toolkit Information"
       url: "https://toolkitinfo.opensciencegrid.org/toolkitinfo/"
-    - label; "SAND Network Display"
+    - label: "SAND Network Display"
       url: "https://display.sand-ci.org"
   caption: ""
 excerpt: 'Combine, visualize, and analyze disparate network monitoring and service logging data'
