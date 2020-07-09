@@ -28,16 +28,30 @@ feature_row:
     alt: "Sample packet loss graph"
     title: "Packet Loss Tracking"
     excerpt: "Sample packet loss graph from the SAND archive"
-    url: https://atlas-kibana.mwt2.org/s/networking/app/kibana#/dashboard/perfSONAR
+    url:  https://atlas-kibana.mwt2.org/s/networking/app/kibana#/dashboard/07a03a80-beda-11e9-96c8-d543436ab024?_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3Anow-3d%2Cto%3Anow))
+    btn_label: "View Dashboard"
+    btn_class: "btn--primary"
   - image_path: /images/sample_throughput.png
     alt: "Sample TCP throughput graph"
     title: "Throughput Tracking"
-    excerpt: "SAND's archives record historical single-stream TCP throughout across many links"
-  - image_path: /images/sample_data_collection.png
-    alt: "Sample Data Collection Rates"
-    title: "Running Data Collection Queries"
-    excerpt: "SAND continuously queries participating perfSONAR endpoints to pull their data into the archive"
-    url: https://gracc.opensciencegrid.org/dashboard/db/perfsonar-collector?orgId=1
+    excerpt: "SAND's archives record historical single-stream TCP across many links"
+    url:  https://atlas-kibana.mwt2.org/s/networking/app/kibana#/dashboard/ab7c4950-5cfa-11ea-bad0-ff3d06e7229e?_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3Anow-3d%2Cto%3Anow))
+    btn_label: "View Dashboard"
+    btn_class: "btn--primary"
+  - image_path: /images/sample_traceroute_dashboard.png
+    alt: "Traceroute Dashboard"
+    title: "Traceroute Tracking"
+    excerpt: "SAND's archives record historical traceroutes throughout many links"
+    url: https://atlas-kibana.mwt2.org/s/networking/app/kibana#/dashboard/58121420-5e17-11ea-bad0-ff3d06e7229e?_g=(filters%3A!()%2CrefreshInterval%3A(pause%3A!t%2Cvalue%3A0)%2Ctime%3A(from%3Anow-3d%2Cto%3Anow))
+    btn_label: "View Dashboard"
+    btn_class: "btn--primary"
+  - image_path: /images/sample_traceroute_explorer.png
+    alt: "MEPHi TRACER (traceroute explorer)"
+    title: "MEPHi TRACER"
+    excerpt: "Interactive Traceroute explorer"
+    url: https://perfsonar.uc.ssl-hep.org/
+    btn_label: "Open App"
+    btn_class: "btn--primary"
 ---
 
 ## About SAND
