@@ -52,6 +52,13 @@ feature_row:
     url: https://perfsonar.uc.ssl-hep.org/
     btn_label: "Open App"
     btn_class: "btn--primary"
+  - image_path: /images/ps-dash-sample.png
+    alt: "PS-Dash App"
+    title: "PS-Dash App"
+    excerpt: "Site measurements summary"
+    url: https://ps-dash.uc.ssl-hep.org/
+    btn_label: "Open App"
+    btn_class: "btn--primary"
 ---
 
 ## About SAND
