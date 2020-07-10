@@ -55,7 +55,7 @@ feature_row:
   - image_path: /images/ps-dash-sample.png
     alt: "PS-Dash App"
     title: "PS-Dash App"
-    excerpt: "Site measurements summary"
+    excerpt: "OSG-LHC/WLCG network metrics summary, ordered by most problematic sites first"
     url: https://ps-dash.uc.ssl-hep.org/
     btn_label: "Open App"
     btn_class: "btn--primary"
