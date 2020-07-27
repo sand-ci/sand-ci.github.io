@@ -97,7 +97,7 @@ A few metrics about our service:
 
 * SAND users: Engaged BNL (ATLAS), AGLT2 (ATLAS), MWT2 (ATLAS), UCSD (CMS), Nebraska (CMS), Wisconsin (CMS), MIT (CMS), and Purdue (CMS), all within the last year, to identify and resolve network issues
 * Number of data sources: 236 distinct perfSONAR endpoints
-* Number of HTCondor submit hosts reporting network measurements: 23
+* Number of HTCondor submit hosts reporting network measurements: 19
 * Number of distinct measurements in the ElasticSearch database: over 10 billion, from February 28, 2018 to present
 
 ## Contact us
