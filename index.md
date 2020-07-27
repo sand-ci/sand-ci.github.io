@@ -95,10 +95,10 @@ extend this to XRootD services during 2020.
 
 A few metrics about our service:
 
-* SAND users: SAND is utilized by US ATLAS and US CMS to help debug their network performance.
-* Number of unique data sources: 274
+* SAND users: Engaged BNL (ATLAS), AGLT2 (ATLAS), MWT2 (ATLAS), UCSD (CMS), Nebraska (CMS), Wisconsin (CMS), MIT (CMS), and Purdue (CMS), all within the last year, to identify and resolve network issues
+* Number of data sources: 236 distinct perfSONAR endpoints
 * Number of HTCondor submit hosts reporting network measurements: 23
-* Number of distinct measurements in the ElasticSearch database: over 2.3 billion
+* Number of distinct measurements in the ElasticSearch database: over 10 billion, from February 28, 2018 to present
 
 ## Contact us
 
