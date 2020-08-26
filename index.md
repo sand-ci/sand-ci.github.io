@@ -77,10 +77,8 @@ SAND maintains a map of CC\* sites running perfSONAR; to allow your site to show
 
 ## IRIS-HEP [Summer 2020 Fellowship](https://iris-hep.org/fellows.html) Presentations
 
-Meeting times and URLs to be announced
-
-* _Improving the User Interface to OSG-LHC Network Metrics_ by [Thomas Shearer](https://iris-hep.org/fellows/ThomasShearer.html) on August 31, 2020
-* _Creating a User Interface to Analyse Network Topology_ by [Manjari Trivedi](https://iris-hep.org/fellows/trivm963.html) on October 5, 2020
+* [_Improving the User Interface to OSG-LHC Network Metrics_](https://indico.cern.ch/event/946428/#3-thomas-shearer) by [Thomas Shearer](https://iris-hep.org/fellows/ThomasShearer.html) on September 21, 2020 at 12:00 PM EDT
+* [_Creating a User Interface to Analyse Network Topology_](https://indico.cern.ch/event/946431/#3-manjari-trivedi) by [Manjari Trivedi](https://iris-hep.org/fellows/trivm963.html) on October 5, 2020 at 12:00 PM EDT
 
 
 {% include feature_row %}
