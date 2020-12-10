@@ -52,10 +52,10 @@ feature_row:
     url: https://perfsonar.uc.ssl-hep.org/
     btn_label: "Open App"
     btn_class: "btn--primary"
-  - image_path: /images/ps-dash-sample.png
+  - image_path: /images/sample_ps-dash.png
     alt: "PS-Dash App"
     title: "PS-Dash App"
-    excerpt: "OSG-LHC/WLCG network metrics summary, ordered by most problematic sites first"
+    excerpt: "OSG-LHC/WLCG network metrics summary, site rankings, and highlighted problem pairs"
     url: https://ps-dash.uc.ssl-hep.org/
     btn_label: "Open App"
     btn_class: "btn--primary"
