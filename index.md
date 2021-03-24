@@ -10,7 +10,7 @@ header:
     - label: "View Network Dashboard"
       url: "https://psmad.opensciencegrid.org/maddash-webui/index.cgi"
     - label: "Historical Network Performance"
-      url: "https://atlas-kibana.mwt2.org/s/networking/app/kibana#/dashboard/perfSONAR"
+      url: "https://atlas-kibana.mwt2.org:5601/s/networking/app/dashboards#/view/perfSONAR"
 #   - label: "View Perfsonar Collector Performance"
 #     url: "https://gracc.opensciencegrid.org/dashboard/db/perfsonar-collector?orgId=1"
     - label: "View Github"
