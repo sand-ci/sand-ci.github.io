@@ -18,5 +18,13 @@ various archictural information, operational links, and FAQs.
 * [ps-ingest](https://github.com/sand-ci/ps-ingest): Daemons that read data from the RabbitMQ message bus and uploads it into an ElasticSearch instance.
 * [SAND Display](https://github.com/sand-ci/sand-display): The software the powers the Google maps-based visualization of the data in the SAND-NMA.
 
-## Technical Documents
+## Presentations
 
+* Networking Alerts and Alarms
+  {% include video id="rCe2RAXkrVU" provider="youtube" %}
+* perfSONAR Dashboard
+  {% include video id="trf15pmw2HA" provider="youtube" %}
+* OSG Networking Toolkit
+  {% include video id="rv9mWzoBBS0" provider="youtube" %}
+
+## Technical Documents
