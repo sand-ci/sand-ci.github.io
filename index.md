@@ -95,24 +95,17 @@ data into directly), an archive, and a visualization platform, as pictured here:
   <img class="card-img-bottom" src="/images/SAND-Architecture1.png" alt="SAND-NMA Architecture"/>
 </div>
 
-Currently, we are recording network measurements from perfSONAR and
-[HTCondor file transfer](https://opensciencegrid.org/docs/other/schedd-filebeats/); we plan to
-extend this to XRootD services during 2020.
+Currently, we are recording network measurements from perfSONAR,
+[HTCondor file transfer](https://opensciencegrid.org/docs/other/schedd-filebeats/), and
+and XRootD TCP transfers.
 
 A few metrics about our service:
 
-* SAND users: Engaged BNL (ATLAS), AGLT2 (ATLAS), MWT2 (ATLAS), UCSD (CMS), Nebraska (CMS), Wisconsin (CMS), MIT (CMS), and Purdue (CMS), all within the last year, to identify and resolve network issues
-* Number of data sources: 236 distinct perfSONAR endpoints
-* Number of HTCondor submit hosts reporting network measurements: 19
-* Number of distinct measurements in the ElasticSearch database: over 10 billion, from February 28, 2018 to present
+* SAND users: Engaged BNL (ATLAS), AGLT2 (ATLAS), MWT2 (ATLAS), UCSD (CMS), Nebraska (CMS), Wisconsin (CMS), MIT (CMS), and Purdue (CMS) to identify and resolve network issues
+* Number of data sources: 323 distinct perfSONAR endpoints
+* Number of HTCondor submit hosts reporting network measurements: 16
+* Number of distinct measurements in the ElasticSearch database: over 16 billion, from February 28, 2018 to present
 
 ## Contact us
 
-SAND has a weekly meeting for collaborators and project members:
-
-| **When**   | Monday, 3:00–4:00 p.m. Central Time                         |
-| **Online** | [https://unl.zoom.us/j/344520180](https://unl.zoom.us/j/344520180)                             |
-| **Phone**  | +1 646 876 9923,or +1 669 900 6833, Meeting ID: 344 520 180 |
-
-Additionally, we can be reached via our [public Google Group](https://groups.google.com/a/sand-ci.org/forum/#!forum/discuss).
-
+We can be reached via our [public Google Group](https://groups.google.com/a/sand-ci.org/forum/#!forum/discuss).
